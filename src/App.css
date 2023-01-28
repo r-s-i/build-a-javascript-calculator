@@ -1,19 +1,5 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -23,16 +9,54 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+* {
+  border: solid 1px white;
+  box-sizing: border-box;
 }
+/*Whole calculator:*/
+h1 {
+  margin: 0;
+  font-size: 1rem;
+}
+#calculator {
+  width: 16rem;
+}
+/*Display / screen:*/
+#display {
+  height: 8rem;  
+  overflow: auto;
+  text-align: left;
+  padding: 0.5rem;
+}
+/*Buttons:*/
+#equals { grid-area: equals; }
+#divide { grid-area: divide; }
+#multiply { grid-area: multiply; }
+#subtract { grid-area: subtract; }
+#add { grid-area: add; }
+#decimal { grid-area: decimal; }
+#clear { grid-area: clear; }
+#zero { grid-area: zero; }
+#one { grid-area: one; }
+#two { grid-area: two; }
+#three { grid-area: three; }
+#four { grid-area: four; }
+#five { grid-area: five; }
+#six { grid-area: six; }
+#seven { grid-area: seven; }
+#eight { grid-area: eight; }
+#nine { grid-area: nine; }
+#home { grid-area: home; }
+#test { grid-area: test; }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#buttons {
+  height: 16rem;
+  display: grid;
+  grid-template-areas:
+  "clear divide multiply subtract"
+  "seven eight nine add"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals"
+  "home home test test";
 }
