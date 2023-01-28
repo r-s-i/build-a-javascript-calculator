@@ -23,6 +23,7 @@ h1 {
 }
 /*Display / screen:*/
 #display {
+  background: black;
   height: 8rem;  
   overflow: auto;
   text-align: left;
@@ -59,4 +60,9 @@ h1 {
   "one two three equals"
   "zero zero decimal equals"
   "home home test test";
+}
+
+/*freeCodeCamp test:*/
+#fcc_test_suite_wrapper  {
+  visibility: hidden;
 }
