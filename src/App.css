@@ -1,3 +1,7 @@
+html {
+  background-color: #282c34;
+}
+
 .App {
   text-align: center;
   background-color: #282c34;
@@ -10,33 +14,60 @@
   color: white;
 }
 * {
-  border: solid 1px white;
   box-sizing: border-box;
 }
 /*Whole calculator:*/
+#calculator {
+  --width: 20rem;
+  margin: 1rem;
+  min-width: var(--width);
+  height: calc(2*var(--width));
+  
+}
+
 h1 {
   margin: 0;
+  height: 5%;
+  display: grid;
+  align-items: center;
   font-size: 1rem;
-}
-#calculator {
-  width: 16rem;
 }
 /*Display / screen:*/
 #display {
   background: black;
-  height: 8rem;  
+  height: 15%;
+  max-height: 200px;
   overflow: auto;
   text-align: left;
   padding: 0.5rem;
+  max-width: 100%;
 }
+
 /*Buttons:*/
+#buttons {
+  height: 80%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas:
+  "clear divide multiply subtract"
+  "seven eight nine add"
+  "four five six add"
+  "one two three equals"
+  "zero zero decimal equals"
+  "home home tests tests"
+
+}
+#buttons > button {
+  font-size: 2rem;
+}
+
 #equals { grid-area: equals; }
 #divide { grid-area: divide; }
 #multiply { grid-area: multiply; }
 #subtract { grid-area: subtract; }
 #add { grid-area: add; }
-#decimal { grid-area: decimal; }
-#clear { grid-area: clear; }
+#decimal { grid-area: decimal;}
+#clear { grid-area: clear;}
 #zero { grid-area: zero; }
 #one { grid-area: one; }
 #two { grid-area: two; }
@@ -48,21 +79,21 @@ h1 {
 #eight { grid-area: eight; }
 #nine { grid-area: nine; }
 #home { grid-area: home; }
-#test { grid-area: test; }
+#tests { grid-area: tests; }
 
-#buttons {
-  height: 16rem;
-  display: grid;
-  grid-template-areas:
-  "clear divide multiply subtract"
-  "seven eight nine add"
-  "four five six add"
-  "one two three equals"
-  "zero zero decimal equals"
-  "home home test test";
-}
+
 
 /*freeCodeCamp test:*/
 #fcc_test_suite_wrapper  {
   visibility: hidden;
+}
+
+@media (max-width: 300px) {
+  #calculator {
+    --width: 100vw;
+    font-size: 10vw;
+  }
+  #buttons > button {
+    font-size: 10vw;
+  }
 }
