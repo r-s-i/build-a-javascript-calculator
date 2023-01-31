@@ -7,7 +7,7 @@ A basic calculator implemented using React and MathJS.
 - Basic arithmetic operations (addition, subtraction, multiplication, and division).
 - Use of keyboard to perform operations and update the display.
 - Error handling.
-- Option to turn on tests (while make the calculator give "false" outputs).
+- Option to turn on tests (will make the calculator give "false" outputs).
 
 ## Usage
 
